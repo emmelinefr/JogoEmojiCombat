@@ -74,7 +74,7 @@ public class Lutador {
         private void setCategoria() {
             this.categoria = categoria;
 
-            if (this.getPeso() < 52.2 || this.peso <= 120.2) {
+            if (this.getPeso() < 52.2) {
                 this.categoria = "Inválido";
             } else if (this.getPeso() <= 70.3) {
                 this.categoria = "Leve";
@@ -82,6 +82,8 @@ public class Lutador {
                 this.categoria = "Médio";
             } else if (this.peso <= 120.2) {
                 this.categoria = "Pesado";
+            } else {
+                this.categoria = "Inválido";
             }
         }
 
@@ -118,7 +120,7 @@ public class Lutador {
                             "\nApresentamos o lutador: " + this.getNome() +
                             "\nDiretamente de: " + this.getNacionalidade() +
                             "\nCom " + this.getIdade() + " anos" +
-                            "\nPesando " + this.getAltura() + " Kg" +
+                            "\nPesando " + this.getPeso() + " Kg" +
                             "\nGanhou: " + this.getVitorias() + " lutas" +
                             "\nPerdeu: " + this.getDerrotas() + " lutas" +
                             "\nEmpatou: " + this.getEmpates() + " lutas"
@@ -126,7 +128,7 @@ public class Lutador {
         }
 
         public void status() {
-            System.out.println(this.getNome() + "\nÉ um peso " + this.getCategoria() + ", " + this.getVitorias() + " vitórias, " + this.getDerrotas() + " derrotas e " + this.getEmpates() + "empates");
+            System.out.println(this.getNome() + "\nÉ um peso " + this.getCategoria() + ", " + this.getVitorias() + " vitórias, " + this.getDerrotas() + " derrotas e " + this.getEmpates() + " empates");
         }
 
         public void ganharLuta() {
