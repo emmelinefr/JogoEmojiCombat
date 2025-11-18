@@ -50,7 +50,7 @@ public class Luta {
         }
     }
 
-    public void lutar {
+    public void lutar (){
         desafiante.apresentar();
         desafiado.apresentar();
         
