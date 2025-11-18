@@ -53,6 +53,6 @@ public class Luta {
     public void lutar (){
         desafiante.apresentar();
         desafiado.apresentar();
-        
+
     }
 }
